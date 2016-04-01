@@ -2,12 +2,36 @@
 <html lang="en">
 
 <!-- Mirrored from themewinter.com/html/lawhouse/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Mar 2016 09:00:48 GMT -->
-<head>
+<?php
+
+        
+          if($_POST){
+
+
+            $to ="a.razzaqbhutto@yahoo.com";        
+            $txt = $_POST['name'];
+            $email = $_POST['email'];
+            $subject = $_POST['subject'];
+            $com = $_POST['comment'];
+            $headers = "From: $email" . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+              
+              if(mail($to,$subject,$txt,$headers)){
+                  echo "Mail sent";
+              }
+              else{
+              
+              echo "Mail sending fail";
+              }
+              
+          }
+    ?>
+    <head>
 
 	<!-- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-    <title>LawHouse - Lawyer Attorney Html Template</title>
+    <title>Jangda Law - Lawyer Attorney Html Template</title>
 
 
 	<!-- Mobile Specific Metas
@@ -16,11 +40,11 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="icon" href="img/favicon/favicon-32x32.html" type="image/x-icon" />
+	<link rel="icon" href="img/favicon/logo4.png" type="image/x-icon" />
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.html">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.html">
 	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.html">
-	
+
 	<!-- CSS
 	================================================== -->
 	
@@ -126,10 +150,12 @@
 						</li>
 						<li>
 							<div class="consult">
-								<a href="#"><span>Free Consult</span></a>
+								<a href="https://www.google.com/maps/place/12001+N+Central+Expy+%23280,+Dallas,+TX+75243,+USA/@32.9138903,-96.7708993,17z/data=!3m1!4b1!4m2!3m1!1s0x864c20148e425095:0x19d9e6268b3036c5" target="_blank"><span>Free Consult</span></a>
 							</div>
-						</li>
-					</ul>
+                       
+                		 </li>
+                    </ul>
+					
          	</div><!-- header right end -->
 			</div><!-- Row end -->
 		</div><!-- Container end -->
@@ -250,9 +276,51 @@
             <div class="slider-content">
                <div class="col-md-12">
               		<div class="slider-text wow slideInLeft" data-wow-delay=".2s">
-              			<h2 class="slide-head">LawHouse</h2>
+              		<!--	<h2 class="slide-head">LawHouse</h2>
                      <h3 class="slide-title">Your <span>Shelter</span> &amp;<br/>
-                     <span>Security</span></h3>
+                     <span>Security</span></h3>-->
+                        <div class="quote_form" style=" width:70%">
+
+						<h3 class="quote_form_title">Request A Consultation <br /> <span>Totally Free</span></h3>
+						<div class="row">
+                   	<div class="col-xs-12 col-md-12">
+	                    	<div class="quote-form-text">
+	                    		Fill out the form below, we will get back you soon. You can also call us now on (90) 03452-8437. 
+	                   
+                                    </div>
+                                    
+                    </div>
+                	</div>
+                	<div class="row">
+	                  <div class="col-xs-12 col-md-12">
+	                    	<div class="form-group">
+									<input class="form-control" name="name" id="name" placeholder="Your Name" required>
+								</div>
+	                  </div>
+                	</div>
+						<div class="row">
+	                  <div class="col-xs-12 col-md-12">
+	                    	<div class="form-group">
+									<input class="form-control" name="email" id="email" placeholder="Your Email" required>
+								</div>
+	                  </div>
+                	</div>
+                	<div class="row">
+                   	<div class="col-xs-12 col-md-12">
+                    		<div class="form-group">
+                            <input class="form-control" name="subject" id="subject" type="text" placeholder="Subject" required />
+                        </div>
+                    </div>
+                	</div>
+                 <div class="row">
+                    	<div class="col-xs-12 col-md-12">
+                    		<div class="form-group">
+                           <textarea class="form-control" placeholder="Case Details" rows="4" name="comment" required></textarea>
+                    		</div>
+                    	</div>
+                 </div>
+                            
+					</div>
                  	</div>
                   <div class="slider-img wow slideInRight" data-wow-delay=".5s">
                      	<img class="pull-right" src="images/slider/img1.png" alt="">
@@ -415,10 +483,10 @@
 							<img class="img-responsive" src="images/practice/family.jpg" alt="" />
 							<div class="overlay text-center">
 								<span class="practice-icon">
-									<i class="ion-ios-people-outline"></i>
+									<i class="ion-flag flag-cz"></i>
 								</span>
 								<h3 class="practice-title">Immigration Law</h3>
-								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p>
+				<!--				<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p> -->
 								<a class="read-more" href="#">Read More</a>
 							</div><!-- Item overlay end -->
 						</div><!-- Item img end -->
@@ -433,10 +501,10 @@
 							<img class="img-responsive" src="images/practice/land.jpg" alt="" />
 							<div class="overlay text-center">
 								<span class="practice-icon">
-									<i class="ion-ios-home-outline"></i>
+									<i class="ion-crime"></i>
 								</span>
 								<h3 class="practice-title">Criminal Defense</h3>
-								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p>
+				<!--				<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p> -->
 								<a class="read-more" href="#">Read More</a>
 							</div><!-- Item overlay end -->
 						</div><!-- Item img end -->
@@ -451,10 +519,10 @@
 							<img class="img-responsive" src="images/practice/sex.jpg" alt="" />
 							<div class="overlay text-center">
 								<span class="practice-icon">
-									<i class="ion-woman"></i>
+									<i class="fa fa-users"></i>
 								</span>
 								<h3 class="practice-title">Family Law</h3>
-								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p>
+				<!--				<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p> -->
 								<a class="read-more" href="#">Read More</a>
 							</div><!-- Item overlay end -->
 						</div><!-- Item img end -->
@@ -472,7 +540,7 @@
 									<i class="ion-cash"></i>
 								</span>
 								<h3 class="practice-title">Business Counsel</h3>
-								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p>
+<!--								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p> -->
 								<a class="read-more" href="#">Read More</a>
 							</div><!-- Item overlay end -->
 						</div><!-- Item img end -->
@@ -490,7 +558,7 @@
 									<i class="ion-social-reddit-outline"></i>
 								</span>
 								<h3 class="practice-title">Tax Resolution</h3>
-								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p>
+	<!--							<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p> -->
 								<a class="read-more" href="#">Read More</a>
 							</div><!-- Item overlay end -->
 						</div><!-- Item img end -->
@@ -505,10 +573,10 @@
 							<img class="img-responsive" src="images/practice/industry.jpg" alt="" />
 							<div class="overlay text-center">
 								<span class="practice-icon">
-									<i class="ion-ios-cog-outline"></i>
+									<i class=""></i>
 								</span>
-								<h3 class="practice-title">Property Law</h3>
-								<p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p>
+								<h3 class="practice-title">Personal Injury</h3>
+								<!-- <p class="practice-details">Lorem ipsum dolor sit amet, consecteturnos mpor incididunt ut labore et dolore magnaaei aliqua. Ut enim ad minim veniam</p> -->
 								<a class="read-more" href="#">Read More</a>
 							</div><!-- Item overlay end -->
 						</div><!-- Item img end -->
@@ -528,7 +596,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h3 class="action-title">Call today for your <br/> free consultation</h3>
-					<h4 class="action-subtitle">We are here to help</h4>
+<!--					<h4 class="action-subtitle">We are here to help</h4> -->
 					<p class="action-btn">
 						<a href="#" class="btn btn-primary"><i class="ion-android-call"></i> (972) - 468 - 8855</a>	
 <!--						<a href="#" class="btn btn-primary"><i class="ion-android-call"></i> (972) - 468 - 8855</a>	-->
@@ -538,7 +606,7 @@
 		</div><!--/ Container end -->
 	</section><!-- Action end -->
 
-
+<!--
 	<section id="image-block" class="image-block no-padding">
 		<div class="container-fluid">
 			<div class="row">
@@ -558,7 +626,7 @@
 								<p class="feature-desc">Dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt.</p>
 							</div>
 						</div><!--/ End 1st -->
-						<div class="col-md-6 col-xs-12">
+	<!--					<div class="col-md-6 col-xs-12">
 							<div class="feature">
 								<span class="feature-icon">
 									<i class="ion-ios-people-outline"></i>
@@ -567,9 +635,9 @@
 								<p class="feature-desc">Dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt.</p>
 							</div>
 						</div><!--/ End 2nd -->
-					</div><!--1st Row end -->
+<!--					</div><!--1st Row end -->
 
-					<div class="gap-20"></div>
+	<!--				<div class="gap-20"></div>
 
 					<div class="row">
 						<div class="col-md-6 col-xs-12">
@@ -581,7 +649,7 @@
 								<p class="feature-desc">Dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt.</p>
 							</div>
 						</div><!--/ End 3rd -->
-						<div class="col-md-6 col-xs-12">
+		<!--				<div class="col-md-6 col-xs-12">
 							<div class="feature">
 								<span class="feature-icon">
 									<i class="ion-ios-analytics-outline"></i>
@@ -590,14 +658,14 @@
 								<p class="feature-desc">Dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt.</p>
 							</div>
 						</div><!--/ End 4th -->
-					</div><!--1st Row end -->
-
+			<!--		</div><!--1st Row end -->
+<!--
 				</div><!-- Col end -->
-				<div class="col-md-6 ts-padding" style="height:600px;background:url(images/image-block-bg1.jpg) 50% 50% / cover no-repeat;">
+	<!--			<div class="col-md-6 ts-padding" style="height:600px;background:url(images/image-block-bg1.jpg) 50% 50% / cover no-repeat;">
 				</div><!-- Col end -->
-			</div><!--/ Content row end -->
-		</div><!--/ Container end -->
-	</section><!-- Image block end -->
+		<!--	</div><!--/ Content row end -->
+<!--		</div><!--/ Container end -->
+<!--	</section><!-- Image block end --> 
 
 	<!-- Attorneys start -->
 	<section id="attorneys" class="attorneys">
@@ -869,18 +937,24 @@
 	</section><!--/ News end -->
 
 	<section id="quote-area" class="quote-area">
-		<div class="container">
+
+
+<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-md-push-1">
 					<div class="quote_form">
+
 						<h3 class="quote_form_title">Request A Consultation <span>Totally Free</span></h3>
 						<div class="row">
                    	<div class="col-xs-12 col-md-12">
 	                    	<div class="quote-form-text">
 	                    		Fill out the form below, we will get back you soon. You can also call us now on (90) 03452-8437. 
-	                    	</div>
+	                   
+                                    </div>
+                                    
                     </div>
                 	</div>
+                                <form action="index.php" method="post">
                 	<div class="row">
 	                  <div class="col-xs-12 col-md-12">
 	                    	<div class="form-group">
@@ -909,16 +983,19 @@
                     		</div>
                     	</div>
                  </div>
+                            
 					 	<div class="form-group">
 							<input class="button btn btn-primary" type="submit" value="Submit">
 						</div>
 						<div class="form-group tag-line">
 							<p>* All fields are required</p>
 						</div>
+ </form>
 					</div><!-- Quote form end -->
 				</div><!--/ Col end -->
 			</div><!--/ Content row end -->
 		</div><!--/ Container end -->
+       
 	</section><!--/ Quote area end -->
 
 	<section id="clients" class="clients">
